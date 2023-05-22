@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOKEPON!</title>
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    
+    <section id="seleccionar-pokemon">
+        <h1 class="titulo">MOKEPON! </h1>
+
+        <h2 class="subtitulo">Elige tu mokepon:</h2>
+
+        <div id="contenedorDetarjetasMokepon" class="tarjetas">
+            
+        </div>
+        
+        <button id="boton-pokemon">Seleccionar</button>
+    </section>
+
+    <section id="ver-mapa">
+        <h2 class="subtitulo">Recorre el mapa con tu mokepon </h2>
+        <canvas id="mapa"></canvas>
+        <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button>
+        <div>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">Izquierda</button>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">Abajo</button>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">Derecha</button>
+        </div>
+    </section>
+
+    <section id="seleccionar-ataque">
+            <h1 class="titulo">MOKEPON! </h1>
+
+            <h2 class="subtitulo">Elige tu ataque:</h2>
+
+            <div id="contenedorAtaques" class="tarjeta-ataque">
+            
+            </div>
+
+            <div>
+               <div id="mensajes">  
+                    <p id="resultado">Suerte</p>
+                
+
+                    <section id="reinicar">
+                        <button id="boton-reiniciar">Jugar de nuevo</button>
+                    </section>
+                </div>
+
+                <div class="ataques">
+                    <div class="ataque-jugador-div-padre-hijo">
+                        <p id="vidas-jugador">0</p>
+                        <p id="pokemon-jugador"></p>
+                        <div id="ataque-Jugador"></div>
+                    </div>
+                    <div class="ataque-enemigo-div-padre-hijo">
+                        <p id="vidas-enemigo">0</p>
+                        <p id="pokemon-enemigo"></p>
+                        <div id="ataque-Enemigo"></div>
+                    </div>         
+                </div>   
+            </section>
+        <script src="./mokepon.js"></script>
+    </body>
+</html>
